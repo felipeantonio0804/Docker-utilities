@@ -1,0 +1,25 @@
+version: '2'
+
+networks:
+  condanet:
+
+# Definición del volumen para persistir los datos de Conda
+#volumes:
+#  conda_envs:  
+
+services:
+  jupyter:
+    build: ./Conda
+    container_name: jupyter-notebookserver
+    ports:
+      - 8888:8888
+    volumes:
+      - /mnt/c/Users/felip/Documents/NotebooksJupyter:/home/jupyter/notebooks
+      #- conda_envs:/opt/conda/envs
+    environment:
+      - TZ=America/New_York
+      - CONDA_ENV=oldPython
+    networks:
+      condanet:
+        aliases:
+          - jupyter-notebookserver
