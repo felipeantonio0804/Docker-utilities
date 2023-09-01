@@ -4,3 +4,8 @@ Permitira levantar un contenedor con ambiente de Anaconda, para ejecutar noteboo
 ```bash
 docker-compose up --build
 ```
+## NodeJS server
+Permitira levantar un servidor de NodeJS y desplegar aplicacion sencilla, haciendo ping a otro servidor con BD Redis y mostrandolo en la pagina inicial
+```bash
+docker-compose up --build
+```

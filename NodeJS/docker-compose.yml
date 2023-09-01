@@ -1,0 +1,21 @@
+version: '2'
+
+networks:
+  appwebnet:
+
+services:
+  appnodejs:
+    build: .
+    ports:
+      - 8080:8080
+    networks:
+      - appwebnet
+    #volumes:
+    #  - ./app:/usr/src/app
+
+  bbdd:
+    image: 'redis:alpine'
+    networks:
+      appwebnet:
+        aliases:
+          - superdatabase
