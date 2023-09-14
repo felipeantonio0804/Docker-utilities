@@ -9,3 +9,9 @@ Permitira levantar un servidor de NodeJS y desplegar aplicacion sencilla, hacien
 ```bash
 docker-compose up --build
 ```
+
+## Django-Python app base
+Permitira levantar un contenedor corriendo una aplicacion web de python con el framework de django, se pueden seguir creando aplicacion de django teniendo esta base, mediante el comando `python manage.py startapp nombre_de_la_aplicacion`
+```bash
+docker-compose up --build
+```
