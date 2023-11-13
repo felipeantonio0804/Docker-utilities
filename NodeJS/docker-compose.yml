@@ -5,13 +5,11 @@ networks:
 
 services:
   appnodejs:
-    build: .
+    build: ./app
     ports:
       - 8080:8080
     networks:
       - appwebnet
-    #volumes:
-    #  - ./app:/usr/src/app
 
   bbdd:
     image: 'redis:alpine'
@@ -19,3 +17,8 @@ services:
       appwebnet:
         aliases:
           - superdatabase
+
+  expressfirstserver:
+    build: ./express-first-server
+    ports:
+      - 8081:8081
