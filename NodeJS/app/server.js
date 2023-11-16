@@ -13,7 +13,8 @@ app.get('/', (req, res) => {
     var result = "";
     result += "<h2>Comando ls</h2><br/>"+exec('ls -a')+"<br/>";
     result += "<h2>Comando ping a google.com</h2><br/>"+exec('ping -c 2 google.com')+"<br/>";
-    result += "<h2>Comando ping a otro container de db</h2><br/>"+exec('ping -c 2 superdatabase')+"<br/>";
+    result += "<h2>Comando ping a otro container de db(redis)</h2><br/>"+exec('ping -c 2 superdatabase')+"<br/>";
+    result += "<h2>Comando ping a otro container de db(mongoDB)</h2><br/>"+exec('ping -c 2 mongoDB')+"<br/>";
     res.send('<h1>Hello World - listing content</h1><br/>'+result);
 });
 
