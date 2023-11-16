@@ -5,8 +5,8 @@
 1. Permitirá levantar un servidor de NodeJS con framework express, usando: routing, motor de vistas ejs (con bootstrap), y definición de controladores que dan soporte a las rutas
 ## nest-firstserver
 1. Permitirá levantar un servidor de NodeJS con framework nestjs, contiene solo la definicion de una API con sus operaciones de CRUD para tareas, incluye solo el backend y que esta amarrado a un contenedor de MongoDB donde se almacena la informacion de forma persistente. Las operaciones del CRUD se pueden realizar por el programa de Postman o Insomnia
-![get task](https://imgur.com/suDeO2p)
-![get tasks](https://imgur.com/EWiZ2Lm)
-![creating task](https://imgur.com/XlyumAs)
-![updating task](https://imgur.com/TugbALx)
-![deleting task](https://imgur.com/b8ABr2m)
+![get task](https://i.imgur.com/suDeO2p.png "Obteniendo tarea")
+![get tasks](https://i.imgur.com/EWiZ2Lm.png "Obteniendo tareas")
+![creating task](https://i.imgur.com/XlyumAs.png "Creando tarea")
+![updating task](https://i.imgur.com/TugbALx.png "Actualizando tarea")
+![deleting task](https://i.imgur.com/b8ABr2m.png "Eliminando tarea")
