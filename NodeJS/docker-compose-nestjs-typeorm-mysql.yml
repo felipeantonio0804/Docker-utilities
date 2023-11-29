@@ -1,0 +1,33 @@
+version: '1'
+
+networks:
+  appwebnet:
+
+volumes:
+  mysql-data:
+
+services:
+  mysqlDB:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: Misterio0804
+      MYSQL_DATABASE: test
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    command: --init-file /docker-entrypoint-initdb.d/init.sql
+    networks:
+      appwebnet:
+        aliases:
+          - mysqlDB
+
+  nestjstypeormmysql:
+    build: ./nestjs-typeorm-mysql
+    depends_on:
+      - mysqlDB
+    ports:
+      - 3000:3000
+    networks:
+      - appwebnet

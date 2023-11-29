@@ -1,4 +1,4 @@
-version: '2'
+version: '1'
 
 networks:
   appwebnet:
@@ -7,27 +7,6 @@ volumes:
   mongodata:
 
 services:
-  bbdd:
-    image: 'redis:alpine'
-    networks:
-      appwebnet:
-        aliases:
-          - superdatabase
-
-  appnodejs:
-    build: ./app
-    ports:
-      - 8080:8080
-    depends_on:
-      - bbdd
-    networks:
-      - appwebnet
-
-  expressfirstserver:
-    build: ./express-first-server
-    ports:
-      - 8081:8081
-
   mongodb:
     image: mongo
     container_name: mongoDB

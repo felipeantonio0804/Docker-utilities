@@ -1,0 +1,7 @@
+version: '1'
+
+services:
+  expressfirstserver:
+    build: ./express-first-server
+    ports:
+      - 8081:8081
