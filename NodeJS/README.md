@@ -20,7 +20,7 @@ $ docker-compose -f docker-compose-nest-firstserver.yml up --build
 ![updating task](https://i.imgur.com/TugbALx.png "Actualizando tarea")
 ![deleting task](https://i.imgur.com/b8ABr2m.png "Eliminando tarea")
 
-## nest-firstserver
+## nest-typeorm-mysql
 1. Permitirá levantar un servidor de NodeJS con framework nestjs, contiene solo la definicion de una API con sus operaciones de CRUD para usuarios, tambien la relacion entre dos entidades de una base de datos Mysql, incluye solo el backend. Las operaciones del CRUD se pueden realizar por el programa de Postman o Insomnia
 ```bash
 $ docker-compose -f docker-compose-nestjs-typeorm-mysql.yml up --build 
