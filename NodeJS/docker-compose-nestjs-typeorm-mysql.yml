@@ -31,3 +31,15 @@ services:
       - 3000:3000
     networks:
       - appwebnet
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    environment:
+      PMA_HOST: mysqlDB
+      PMA_PORT: 3306
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysqlDB
+    networks:
+      - appwebnet
